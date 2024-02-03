@@ -14,11 +14,14 @@
     --main-color: #B78851;
     --background-color: #000000;
 }
-
 body{
     background-color: var(--background-color);
     color: var(--main-color);
     font-family: 'Poppins', sans-serif;
+}
+h1{
+    font-size: 50px;
+    text-align: center;
 }
 nav{
     text-align: center;
@@ -75,12 +78,12 @@ nav .fa{
     align-items: center;
     margin: 40px;
     text-align: center;
+    transition: transform 0.10s;
 }
-
 .intro img {
     width: 300px;
     border-radius: 50%;
-    transition: transform 0.3s
+    transition: .5s ease;
 }
 .intro img:hover{
     transform: scale(1.2); 
@@ -91,7 +94,141 @@ nav .fa{
     margin-left: 100px;
 }
 
+.about-me{
+    text-align: center;
+    color: var(--background-color);
+    background-color: #B78851;
+}
+.about-me img {
+    width: 300px;
+    border-radius: 50%;
+    transition: .5s ease;
+}
+.about-me img:hover{
+    transform: scale(1.2); 
+}
+.about-me p{
+    margin-top: 50px;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+.influence img{
+    width: 100px;
+    border-radius: 50%;
+    border: 20px solid;
+    padding: 5px;
+    margin-right: 40px;
+    transition: transform 0.10s;
+}
+.influence img:hover{
+    
+    transform: scale(1.2); 
+}
+
+
+.footer{
+    justify-content: space-between;
+    background: var(--main-color);
+    transition: .5s ease;
+    color: var(--background-color);
+    text-align: center;
+}
+.footer-text p{
+   font-size: 15px;
+}
+.footer-iconTop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background:var(--background-color);
+    border-radius: .8rem;
+    transition: transform 0.3s
+}
+
+.footer-iconTop a:hover{
+    transform: scale(1.2); 
+}
+.footer-iconTop a i{
+    font-size: 12px;
+    color: var(--main-color);
+}
+
+
+.portfolio-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+    padding: 30px;
+}
+
+.portfolio-container .portfolio-box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.portfolio-box img{
+    width: 100%;
+    transition: .5s ease;
+}
+
+.portfolio-box:hover img{
+    transform: scale(1.1);
+}
+
+.portfolio-box .portfolio-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(0, 0, 0), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+.portfolio-box:hover .portfolio-layer{
+    transform: translateY(0);
+}
+.portfolio-layer h4{
+    font-size:30px;
+}
+
+.portfolio-layer p{
+    font-size: 13px;
+    color: var(--background-color);
+}
+.portfolio-layer a i{
+    font-size: 30px;
+    color: var(--background-color);
+}
+.project .more-content{
+    text-align: center;
+    margin: 10px;
+}
+.project .more-content span{
+    transition: .5s ease;
+    cursor: pointer;
+    font-weight: 800;
+    text-decoration: none;
+    text-decoration-line: underline;
+    color: #B78851;
+}
+
+
 @media screen and (max-width: 1000px) {
+    h1{
+        font-size: 30px;
+    }
     nav {
         padding: 1rem;
     }
@@ -157,5 +294,24 @@ nav .fa{
     .intro p{
         margin: 0px;
         margin-top: 50px;
+    }
+    .about-me p{
+        margin: 0px;
+        margin-top: 50px;
+    }
+    .influence{
+        text-align: center;
+    }
+    .influence img{
+     
+        width: 80px;
+        border-radius: 50%;
+        border: 0px;
+        padding: 6px;
+        margin: 6px;
+    transition: transform 0.10s;
+    }
+    #project{
+        grid-template-columns: repeat(2,1fr);
     }
 }
