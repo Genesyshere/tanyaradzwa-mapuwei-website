@@ -20,10 +20,10 @@
         </div>
         <div class="nav-links" id="navLinks">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About me</a></li>
-                <li><a href="#">Blogs & Projects</a></li>
-                <li><a href="#">Contact me</a></li>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about-me">About me</a></li>
+                <li><a href="#projects">Blogs & Projects</a></li>
+                <li><a href="#contact">Contact me</a></li>
             </ul>
         </div>
     </nav>
@@ -125,6 +125,22 @@
         <div class="more-content">
             <p>For more captivating content on Tanya's blogs, explore it <a href="#"><span><u>here</u></span></a>.</p>
         </div>
+    </section>
+    <section class="contact" id="contact">
+        <h1>Contact Me</h1>
+        <p>Hello! Please fill out the attached form, and I'll respond promptly.</p>
+        <form>
+            <div class="input-box">
+                <input type="text" id="name" placeholder="Full Names">
+                <input type="email" id="email" placeholder="Email Address">
+            </div>
+            <div class="input-box">
+                <input type="text" id="number" placeholder="Phone Number">
+                <input type="text" id="subject" placeholder="Email Subject">
+            </div>
+            <textarea cols="30" rows="10" id="message" placeholder="Your Message"></textarea>
+            <input type="submit"  onclick="sendEmail()" value="Send Message" class="btn">
+        </form>
     </section>
     <footer class="footer">
         <div class="footer-text">
