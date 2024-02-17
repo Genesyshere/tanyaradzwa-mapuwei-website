@@ -13,10 +13,118 @@
 /*Colors used do the web page*/
 :root{
     --color0:#000000;
-    --color2:#B78851;
+    --color1:#B78851;
 }
 body{
     background-color: var(--color0);
-    color: var(--color2);
+    color: var(--color1);
     font-family: 'Poppins', sans-serif;
 }
+/*navigation bar style*/
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+nav img{
+    width: 110px;
+    transition: transform 0.3s
+}
+nav img:hover{
+    transform: scale(1.2);
+}
+nav ul{
+    list-style: none;
+}
+
+.nav-links li{
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 15px;
+    font-weight: 800;
+}
+.nav-links a{
+    color: var(--color1);
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background:var(--color1);
+    display: block;
+    transition: 0.5s;
+    margin: auto;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+nav .fa{
+    display: none;
+}
+.nav-bar i{
+    display: none;
+}
+
+
+@media screen and (max-width: 1000px) {
+    nav{
+        justify-content: space-between;
+        text-align: center;
+    }
+    nav img{
+        width: 200px;
+    }
+    .nav-links ul li{       
+        display: block;
+        margin: 5px;
+        transition: transform 0.3s
+    }
+    nav ul li a{
+        font-size: 13px;
+        font-weight: 700;
+        text-decoration: none;
+    }
+    .nav-links ul li::after{
+        content: none;
+    }
+    .nav-links ul li:hover{
+        transform: scale(1.2); 
+    }
+ 
+    nav ul li:hover::after{
+        width: 100%;
+    }
+    nav .fa {
+        display: block;
+        cursor: pointer;
+        
+    }
+    nav .fa{
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.5s ease; /* Added transition property */
+    }
+    nav .fa:hover{
+        transform: scale(1.2);
+    }
+    /* New styles for rotating the icon when the menu is open */
+    nav .fa.fa-times{
+    transform: rotate(90deg);
+    }
+    nav .nav-links{
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.10s ease; /* Added transition property */
+    }
+    nav .nav-links.show{
+        max-height: 100vh; /* Adjust the value as needed */
+    }
+}
+
