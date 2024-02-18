@@ -9,6 +9,7 @@
     outline: none;
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 /*Colors used do the web page*/
 :root{
@@ -19,6 +20,7 @@ body{
     background-color: var(--color0);
     color: var(--color1);
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 /*navigation bar style*/
 nav{
@@ -31,6 +33,10 @@ nav{
     text-align: center;
     justify-content: space-between;
     overflow: hidden;
+    background-color: var(--color0);
+}
+nav .sticky{
+    border: .1rem solid rgba(0,0,0,.2);
 }
 nav img{
     width: 110px;
@@ -42,7 +48,6 @@ nav img:hover{
 nav ul{
     list-style: none;
 }
-
 .nav-links li{
     display: inline-block;
     margin-right: 20px;
@@ -67,15 +72,114 @@ nav ul{
 nav .fa{
     display: none;
 }
-.nav-bar i{
-    display: none;
+section{
+    min-height: 100vh;
+}
+h1{
+    font-size: 50px;
+    text-align: center;
+
+}
+p{
+    font-size: 14px;
+}
+.home{
+    text-align: center;
+    padding: 12rem 9% 2rem;
+}
+.intro img{
+    width: 250px;
+    border-radius: 50%;
+}
+.social-media a i{
+    padding: 15px;
+    margin: 20px;
+    font-size: 20px;
+    color: var(--color1);
+    border: solid 3px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    text-align: center;
+}
+.social-media a i:hover{
+    transform: scale(1.2);
+    background-color: var(--color1);
+    color: var(--color0);
 }
 
 
+.about{
+    text-align: center;
+    background-color: var(--color1);
+    color: var(--color0);
+    padding: 0px;
+    padding: 12rem 9% 2rem;
+}
+.about img{
+    width: 250px;
+    border-radius: 50%;
+}
+
+.interest{
+    padding: 12rem 9% 2rem;
+}
+.interest-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.interest-box {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    border: solid var(--color1) 5px ;
+    margin-right: 10px; /* Adjust the margin between boxes as needed */
+  }
+
+.interest-box :last-child {
+    margin-right: 0; /* Remove margin from the last box */
+}
+
+.interest-box i{
+    font-size: 30px;
+}
+
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .box {
+    flex: 1;
+    background-color: #3498db;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    margin-right: 10px; /* Adjust the margin between boxes as needed */
+  }
+
+  .box:last-child {
+    margin-right: 0; /* Remove margin from the last box */
+  }
+
+
+
+
+/*Small screen view*/
 @media screen and (max-width: 1000px) {
+    html{
+        font-size: 55%;
+        text-align: center;
+    }
     nav{
         justify-content: space-between;
         text-align: center;
+    }
+    nav .sticky{
+        display: none;
     }
     nav img{
         width: 200px;
@@ -103,7 +207,6 @@ nav .fa{
     nav .fa {
         display: block;
         cursor: pointer;
-        
     }
     nav .fa{
     font-size: 30px;
@@ -126,5 +229,34 @@ nav .fa{
     nav .nav-links.show{
         max-height: 100vh; /* Adjust the value as needed */
     }
+    section{
+        min-height: 100vh;
+        padding: 36rem 9% 2rem;
+    }
+    h1{
+        font-size: 30px;
+    }
+    p{
+        font-size: 13px;
+    }
+    .social-media{
+        padding: 0px;
+    }
+    .social-media a i{
+        font-size: 20px;
+        margin: 0px;
+        padding: 10px;
+        border: none;
+    }
+    .about{
+        padding: 10px;
+    }
+    .interest-container {
+        flex-direction: column; /* Stack boxes on top of each other on smaller screens */
+      }
+  
+    .interest-box {
+        margin-bottom: 20px; /* Add space between boxes on mobile */
+        margin-right: 0; /* Remove margin for all boxes on smaller screens */
+      }
 }
-
